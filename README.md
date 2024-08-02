@@ -14,9 +14,8 @@ This project contains Python code for preprocessing data imported from a SQL dat
 1. Clone the repository:
    (https://github.com/PatelAk282/Assignment5.git)
    
-2. Install required Python libraries:
-   
-bash
+2. Install required Python libraries:   
+```bash
  pip install pandas sqlalchemy pymysql
  
 
@@ -31,7 +30,7 @@ bash
 - Reads a CSV file containing video game sales data.
 - Filters the DataFrame to find games launched between 2000-2005.
 
-python
+```python
 import pandas as pd
 input_file_path = r"C:\Users\Durham\Desktop\Duraham\Courses\data1202\vgsales.csv"
 input_raw_data = pd.read_csv(input_file_path)
@@ -45,7 +44,7 @@ print(between_00_05)
 - Runs a simple query to read data into a DataFrame.
 - Provides basic data exploration, including shape, size, column names, and data types.
 
-python
+```python
 import pandas as pd
 import pymysql
 from sqlalchemy import create_engine
@@ -64,7 +63,7 @@ print(df.info())
 ### Part 3: Running Complex Queries
 - Runs a complex SQL query to calculate sales and market share for Action games released after 2005.
 
-python
+```python
 complex_df = pd.read_sql_query('''SELECT
     Round(SUM(NA_Sales)) as 'NA_Sales',
     ROUND(SUM(EU_Sales)) as 'EU_Sales',
@@ -84,7 +83,7 @@ print(complex_df.head())
 - Filters the DataFrame for specific conditions, such as games published by Nintendo.
 - Finds the maximum sales of Action games in the EU after 2005.
 
-python
+```python
 nintendo_games = df[df['Publisher'] == 'Nintendo']
 print(nintendo_games.head())
 print("The number of Nintendo games is: " + str(len(nintendo_games)))
