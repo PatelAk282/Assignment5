@@ -17,9 +17,9 @@ This project contains Python code for preprocessing data imported from a SQL dat
 2. Install required Python libraries:   
 ```bash
  pip install pandas sqlalchemy pymysql
+```
  
-
-4. Set up MySQL:
+3. Set up MySQL:
  Install MySQL server.
  Create a database and import the vgsales table.
    
@@ -36,6 +36,7 @@ input_file_path = r"C:\Users\Durham\Desktop\Duraham\Courses\data1202\vgsales.csv
 input_raw_data = pd.read_csv(input_file_path)
 between_00_05 = input_raw_data[(input_raw_data["Year"] >= 2000) & (input_raw_data["Year"] <= 2005)]
 print(between_00_05)
+```
 
 
 
@@ -57,6 +58,7 @@ print(df.size)
 print(df.columns)
 print(df.dtypes)
 print(df.info())
+```
 
 
 
@@ -76,6 +78,7 @@ WHERE
     Genre = 'Action'
         AND Year>= 2005''', conn)
 print(complex_df.head())
+```
 
 
 
@@ -94,6 +97,7 @@ print(action_05.head())
 print("The max sales of action games in EU after 2005 is: " + str(action_05.EU_Sales.max()))
 between_00_05 = df[(df["Year"] >= 2000) & (df["Year"] <= 2005)]
 print(between_00_05)
+```
 
 
 
