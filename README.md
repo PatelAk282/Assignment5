@@ -15,11 +15,12 @@ This project contains Python code for preprocessing data imported from a SQL dat
    (https://github.com/PatelAk282/Assignment5.git)
    
 2. Install required Python libraries:
+   
 bash
  pip install pandas sqlalchemy pymysql
  
 
-3. Set up MySQL:
+4. Set up MySQL:
  Install MySQL server.
  Create a database and import the vgsales table.
    
